@@ -1,0 +1,51 @@
+<h1>My company CAREERS (mon entreprise recrute)</h1>
+<p>Travailler avec nous,</p>
+<p>Progresser avec nous</p>
+<p>Développez vos compétences</p>
+<p>avancez dans votre carrière</p>
+<%if user_signed_in?%>
+<%if current_user.softskills.length > 0%>
+<p>    « Fort de plus plusieurs formations en informatique, j’ai pu travailler sur <%=current_user.softskills.sample(2).map(&:name).to_sentence%>, c’est la raison pour laquelle je pense correspondre au profil que vous recherchez pour ce poste d’animateur. »
+
+    « Passionnée de nouvelles technologies, je suis toujours prête à <%=current_user.softskills.sample.try(:name)%>. »
+</p>
+<%else%>
+<p>Développez vos soft skills
+<a href="<%=edit_user_registration_path%>">edit le profile maintenant</a>
+
+
+</p>
+<%end%>
+<%end%>
+<table>
+<tr>
+  <th>
+    <strong>Title:</strong>
+  </th>
+
+  <th>
+    <strong>Description:</strong>
+  </th>
+
+  <th>
+    <strong>Secteur:</strong>
+  </th>
+
+  <th>
+    <strong>Contrat:</strong>
+  </th>
+
+  <th>
+    <strong>Jobfamily:</strong>
+  </th>
+
+  <th>
+    <strong>Lieu:</strong>
+  </th>
+  <th>
+    <strong>date limite offre:</strong>
+  </th>
+
+</tr>
+<%=render @jobs%>
+</table>

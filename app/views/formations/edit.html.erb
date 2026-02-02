@@ -1,0 +1,12 @@
+<% content_for :title, "Editing formation" %>
+
+<h1>Editing formation</h1>
+
+<%= render "form", formation: @formation %>
+
+<br>
+
+<div>
+  <%= link_to "Show this formation", @formation %> |
+  <%= link_to "Back to formations", formations_path %>
+</div>

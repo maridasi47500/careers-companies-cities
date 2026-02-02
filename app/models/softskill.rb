@@ -1,0 +1,2 @@
+class Softskill < ApplicationRecord
+end

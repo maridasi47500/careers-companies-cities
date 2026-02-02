@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  secteur_id: 1
+  contrat_id: 1
+  jobfamily_id: 1
+  lieu: MyString
+
+two:
+  title: MyString
+  description: MyString
+  secteur_id: 1
+  contrat_id: 1
+  jobfamily_id: 1
+  lieu: MyString

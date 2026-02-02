@@ -1,0 +1,47 @@
+<%= form_with(model: formation) do |form| %>
+  <% if formation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(formation.errors.count, "error") %> prohibited this formation from being saved:</h2>
+
+      <ul>
+        <% formation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%#= form.label :user_id, style: "display: block" %>
+    <%= form.hidden_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :ecole, style: "display: block" %>
+    <%= form.text_field :ecole %>
+  </div>
+
+  <div>
+    <%= form.label :diplome, style: "display: block" %>
+    <%= form.text_field :diplome %>
+  </div>
+
+  <div>
+    <%= form.label :lieu, style: "display: block" %>
+    <%= form.text_field :lieu %>
+  </div>
+
+  <div>
+    <%= form.label :debut, style: "display: block" %>
+    <%= form.text_field :debut %>
+  </div>
+
+  <div>
+    <%= form.label :fin, style: "display: block" %>
+    <%= form.text_field :fin %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

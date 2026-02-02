@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Formations" %>
+
+<h1>Formations</h1>
+
+<div id="formations">
+  <% @formations.each do |formation| %>
+    <%= render formation %>
+    <p>
+      <%= link_to "Show this formation", formation %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New formation", new_formation_path %>

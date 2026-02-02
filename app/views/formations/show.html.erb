@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @formation %>
+
+<div>
+  <%= link_to "Edit this formation", edit_formation_path(@formation) %> |
+  <%= link_to "Back to formations", formations_path %>
+
+  <%= button_to "Destroy this formation", @formation, method: :delete %>
+</div>

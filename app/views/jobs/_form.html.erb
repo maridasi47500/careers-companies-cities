@@ -1,0 +1,51 @@
+<%= form_with(model: job) do |form| %>
+  <% if job.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+        <% job.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :secteur_id, style: "display: block" %>
+    <%= form.select :secteur_id, Secteur.all.collect{|h|[h.name, h.id]} %>
+  </div>
+
+  <div>
+    <%= form.label :contrat_id, style: "display: block" %>
+    <%= form.select :contrat_id, Contrat.all.collect{|h|[h.name, h.id]} %>
+  </div>
+
+  <div>
+    <%= form.label :jobfamily_id, style: "display: block" %>
+    <%= form.select :jobfamily_id, Jobfamily.all.collect{|h|[h.name, h.id]} %>
+  </div>
+
+  <div>
+    <%= form.label :lieu, style: "display: block" %>
+    <%= form.text_field :lieu %>
+  </div>
+  <div>
+    <%= form.label :datefin, style: "display: block" %>
+    <%= form.date_field :datefin %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
