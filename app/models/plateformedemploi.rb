@@ -1,0 +1,2 @@
+class Plateformedemploi < ApplicationRecord
+end

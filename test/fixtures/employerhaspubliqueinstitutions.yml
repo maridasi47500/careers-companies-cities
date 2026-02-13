@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employer_id: 1
+  publiqueinstitution_id: 1
+
+two:
+  employer_id: 1
+  publiqueinstitution_id: 1

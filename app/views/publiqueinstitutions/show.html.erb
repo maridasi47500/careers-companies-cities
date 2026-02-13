@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @publiqueinstitution %>
+
+<div id="imap" >
+            <div id="map" onclick="onMapClick(event);">
+                            <!-- Ici s'affichera la carte -->
+                                </div>
+</div>
+<h2>ajouter un employeur</h2>
+<%= render "employers/form", employer: @employer %>
+
+
+<div>
+  <%= link_to "Edit this publiqueinstitution", edit_publiqueinstitution_path(@publiqueinstitution) %> |
+  <%= link_to "Back to publiqueinstitutions", publiqueinstitutions_path %>
+
+  <%= button_to "Destroy this publiqueinstitution", @publiqueinstitution, method: :delete %>
+</div>

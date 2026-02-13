@@ -1,0 +1,2 @@
+class Publiqueinstitution < ApplicationRecord
+end

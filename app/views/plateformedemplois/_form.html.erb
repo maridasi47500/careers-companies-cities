@@ -1,0 +1,38 @@
+<%= form_with(model: plateformedemploi) do |form| %>
+  <% if plateformedemploi.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(plateformedemploi.errors.count, "error") %> prohibited this plateformedemploi from being saved:</h2>
+
+      <ul>
+        <% plateformedemploi.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :lat, style: "display: block" %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div>
+    <%= form.label :lon, style: "display: block" %>
+    <%= form.text_field :lon %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+<div id="imap" >
+            <div id="map" onclick="onMapClick(event);">
+                            <!-- Ici s'affichera la carte -->
+                                </div>
+</div>
+

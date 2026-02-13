@@ -1,8 +1,5 @@
 <%= form_with(model: job) do |form| %>
-  <% if job.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
-
+  <% if job.errors.any? %> <div style="color: red"> <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2> 
       <ul>
         <% job.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -44,7 +41,24 @@
     <%= form.label :datefin, style: "display: block" %>
     <%= form.date_field :datefin %>
   </div>
+  <div>
+    <%= form.label :interimagence_ids, style: "display: block" %>
+    <%= form.select :interimagence_ids, Interimagence.all.collect{|h|[h.name, h.id]}, {multiple: true} %>
+  </div>
+  <div>
+    <%= form.label :plateformedemploi_ids, style: "display: block" %>
+    <%= form.select :plateformedemploi_ids, Plateformedemploi.all.collect{|h|[h.name, h.id]}, {multiple: true} %>
+  </div>
 
+  <div>
+    <%= form.label :publiqueinstitution_ids, style: "display: block" %>
+    <%= form.select :publiqueinstitution_ids, Publiqueinstitution.all.collect{|h|[h.name, h.id]}, {multiple: true} %>
+  </div>
+
+  <div>
+    <%= form.label :company_ids, style: "display: block" %>
+    <%= form.select :company_ids, Company.all.collect{|h|[h.name, h.id]}, {multiple: true} %>
+  </div>
   <div>
     <%= form.submit %>
   </div>

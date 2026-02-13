@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get "localisation", to: "localisation#monadresse"
+  resources :employers
+  resources :publiqueinstitutions
+  resources :companies
+  resources :interimagences
+  resources :plateformedemplois
   resources :jobs
   resources :formations
   resources :experiences

@@ -1,0 +1,2 @@
+class Publiqueinstitutionhasjob < ApplicationRecord
+end

@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_02_02_024113) do
+ActiveRecord::Schema[8.0].define(version: 2026_02_13_220238) do
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.string "lat"
+    t.string "lon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "companyhasjobs", force: :cascade do |t|
+    t.integer "company_id"
+    t.integer "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "contrats", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -39,6 +54,21 @@ ActiveRecord::Schema[8.0].define(version: 2026_02_02_024113) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "interimagencehasjobs", force: :cascade do |t|
+    t.integer "interimagence_id"
+    t.integer "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "interimagences", force: :cascade do |t|
+    t.string "name"
+    t.string "lat"
+    t.string "lon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "jobfamilies", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -55,6 +85,36 @@ ActiveRecord::Schema[8.0].define(version: 2026_02_02_024113) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "datefin"
+  end
+
+  create_table "plateformedemploihasjobs", force: :cascade do |t|
+    t.integer "plateformedemploi_id"
+    t.integer "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "plateformedemplois", force: :cascade do |t|
+    t.string "name"
+    t.string "lat"
+    t.string "lon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "publiqueinstitutionhasjobs", force: :cascade do |t|
+    t.integer "publiqueinstitution_id"
+    t.integer "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "publiqueinstitutions", force: :cascade do |t|
+    t.string "name"
+    t.string "lat"
+    t.string "lon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "secteurs", force: :cascade do |t|

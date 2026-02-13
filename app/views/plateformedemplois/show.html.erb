@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @plateformedemploi %>
+<div id="imap" >
+            <div id="map" onclick="onMapClick(event);">
+                            <!-- Ici s'affichera la carte -->
+                                </div>
+</div>
+
+
+<div>
+  <%= link_to "Edit this plateformedemploi", edit_plateformedemploi_path(@plateformedemploi) %> |
+  <%= link_to "Back to plateformedemplois", plateformedemplois_path %>
+
+  <%= button_to "Destroy this plateformedemploi", @plateformedemploi, method: :delete %>
+</div>

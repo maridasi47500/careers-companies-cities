@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @interimagence %>
+
+<div id="imap" >
+            <div id="map" onclick="onMapClick(event);">
+                            <!-- Ici s'affichera la carte -->
+                                </div>
+</div>
+
+<div>
+  <%= link_to "Edit this interimagence", edit_interimagence_path(@interimagence) %> |
+  <%= link_to "Back to interimagences", interimagences_path %>
+
+  <%= button_to "Destroy this interimagence", @interimagence, method: :delete %>
+</div>
+
