@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Mycompany" %></title>
+    <title><%= content_for(:title) || "Companies,  cities and job search" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -29,7 +29,7 @@
   <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">MY COMPANY Careers</a>
+    <a class="navbar-brand" href="/">MY COMPANies and my Careers</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -51,7 +51,7 @@
           <a class="nav-link" href="<%=new_company_path%>">ajouter une entreprise</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<%=new_publiqueinstutitution_path%>">ajouter une institution</a>
+          <a class="nav-link" href="<%=new_publiqueinstitution_path%>">ajouter une institution</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<%=employers_path%>">voir tous les employés</a>
