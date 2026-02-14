@@ -1,0 +1,55 @@
+<%= form_with(model: jobevent) do |form| %>
+  <% if jobevent.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(jobevent.errors.count, "error") %> prohibited this jobevent from being saved:</h2>
+
+      <ul>
+        <% jobevent.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+<input id="lieu" type="text"/>
+<button id="chercherlieu" type="button">chercher ce lieu</button>
+  </div>
+  <div>
+    <%= form.label :lat, style: "display: block" %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div>
+    <%= form.label :lon, style: "display: block" %>
+    <%= form.text_field :lon %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+<div id="imap" >
+            <div id="map" onclick="onMapClick(event);">
+                            <!-- Ici s'affichera la carte -->
+                                </div>
+</div>
+
+

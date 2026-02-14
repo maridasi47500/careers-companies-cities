@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :jobevents
   get "localisation", to: "localisation#monadresse"
   resources :employers
   resources :publiqueinstitutions

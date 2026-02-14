@@ -1,0 +1,2 @@
+class Jobevent < ApplicationRecord
+end
