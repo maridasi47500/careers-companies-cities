@@ -1,6 +1,20 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @job %>
+<%= render "jobs/myjob", job: @job %>
+<%@job.employers.each do |h|%>
+<div class="card">
+<p>
+<%=h.name%> est employeur dans cette entreprise.
+</p>
+<%if user_signed_in?%>
+<p>
+<%=link_to "envoyer un message à #{h.name}", "/sendmessage"%>
+</p>
+<%else%>
+<p>se connecter pour plus d'options</p>
+<%end%>
+</div>
+<%end%>
 
 <div>
   <%= link_to "Edit this job", edit_job_path(@job) %> |

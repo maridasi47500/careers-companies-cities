@@ -7,7 +7,11 @@
                             <!-- Ici s'affichera la carte -->
                                 </div>
 </div>
-
+<%@x=@interimagence%>
+<%if @x.try(:lat).to_s.length > 0%>
+<div id="valuelatitude" hidden><%=@x.lat%></div>
+<div id="valuelongitude" hidden><%=@x.lon%></div>
+<%end%>
 <div>
   <%= link_to "Edit this interimagence", edit_interimagence_path(@interimagence) %> |
   <%= link_to "Back to interimagences", interimagences_path %>

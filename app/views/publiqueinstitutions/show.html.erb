@@ -9,6 +9,12 @@
 </div>
 <h2>ajouter un employeur</h2>
 <%= render "employers/form", employer: @employer %>
+<%@x=@publiqueinstitution%>
+<%if @x.try(:lat).to_s.length > 0%>
+<div id="valuelatitude" hidden><%=@x.lat%></div>
+<div id="valuelongitude" hidden><%=@x.lon%></div>
+<%end%>
+
 
 
 <div>

@@ -8,6 +8,12 @@
 </div>
 
 
+<%@x=@plateformedemploi%>
+<%if @x.try(:lat).to_s.length > 0%>
+<div id="valuelatitude" hidden><%=@x.lat%></div>
+<div id="valuelongitude" hidden><%=@x.lon%></div>
+<%end%>
+
 <div>
   <%= link_to "Edit this plateformedemploi", edit_plateformedemploi_path(@plateformedemploi) %> |
   <%= link_to "Back to plateformedemplois", plateformedemplois_path %>
