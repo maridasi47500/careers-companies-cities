@@ -4,6 +4,8 @@
 
 ![alt text](company1.png)
 ![alt text](company2.png)
+![alt text](company3.png)
+![alt text](company4.png)
 -
 
 # careers-company

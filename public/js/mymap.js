@@ -34,12 +34,12 @@ document.getElementById("chercherlieu").onclick = function(){
       //async: false,
       success: (data) => {
 
-        if (data && data[0]){
-           var myplace=data[0];
+        if (data && data.lat){
+           var myplace=data;
            var mylat=myplace.lat;
            var mylon=myplace.lon;
-           document.getElementById('lat').value=mylat;
-           document.getElementById('lon').value=mylon;
+           document.querySelector("[name*='[lat]']").value=mylat;
+           document.querySelector("[name*='[lon]']").value=mylon;
            //document.getElementById('fulladdress').innerHTML="Adresse : "+myplace.display_name;
            macarte.panTo(new L.LatLng(parseFloat(mylat), parseFloat(mylon)));
         }
